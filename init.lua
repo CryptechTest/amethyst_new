@@ -3,6 +3,7 @@ local modpath = minetest.get_modpath("amethyst_new")
 dofile(modpath.."/nodes.lua")
 dofile(modpath.."/crafting.lua")
 dofile(modpath.."/budding.lua")
+dofile(modpath.."/lantern.lua")
 
 geodes_lib:register_geode({
     wherein = "default:stone",

@@ -64,3 +64,12 @@ minetest.register_craft({
         {"", "amethyst_new:amethyst_shard", ""},
     },
 })
+
+minetest.register_craft({
+    output = "amethyst_new:lantern",
+    recipe = {
+        {"default:bronze_ingot", "amethyst_new:amethyst", "default:bronze_ingot"},
+        {"amethyst_new:amethyst", "default:torch", "amethyst_new:amethyst"},
+        {"default:bronze_ingot", "amethyst_new:amethyst", "default:bronze_ingot"},
+    },
+})
