@@ -65,11 +65,17 @@ minetest.register_craft({
     },
 })
 
+if minetest.get_modpath("mesecons") then
+    lantern_craft_item = "group:mesecon_conductor_craftable"
+else
+    lantern_craft_item = "default:torch"
+end
+
 minetest.register_craft({
     output = "amethyst_new:lantern",
     recipe = {
         {"default:bronze_ingot", "amethyst_new:amethyst", "default:bronze_ingot"},
-        {"amethyst_new:amethyst", "default:torch", "amethyst_new:amethyst"},
+        {"amethyst_new:amethyst", lantern_craft_item, "amethyst_new:amethyst"},
         {"default:bronze_ingot", "amethyst_new:amethyst", "default:bronze_ingot"},
     },
 })
