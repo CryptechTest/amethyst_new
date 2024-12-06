@@ -199,3 +199,7 @@ minetest.register_craftitem("amethyst_new:amethyst_shard", {
     description = "Amethyst Shard",
     inventory_image = "amethyst_shard.png",
 })
+
+if minetest.get_modpath("mesecons_mvps") then
+    mesecon.register_mvps_stopper("amethyst_new:amethyst_budding")
+end
