@@ -627,5 +627,6 @@ copy of the Program in return for a fee.
 Media license:
 
 Basalt and calcite textures are modified from textures by AwesomeDragon97, licensed under CC-BY-SA3.0
+default_bronze_block.png and lantern frame are modified from textures by kilbith, licensed under CC-BY-SA3.0
 
 All other textures are CC-BY-SA4.0
