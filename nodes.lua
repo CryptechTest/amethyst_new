@@ -139,6 +139,26 @@ minetest.register_node("amethyst_new:tinted_glass", {
     sounds = default.node_sound_glass_defaults(),
 })
 
+if minetest.get_modpath("doors") then
+    doors.register("door_bronze", {
+        tiles = {{name = "amethyst_bronze_door.png", backface_culling = true}},
+        description = "Bronze Door",
+        inventory_image = "amethyst_item_bronze_door.png",
+        protected = true,
+        groups = {node = 1, cracky = 1, level = 2},
+        sounds = default.node_sound_metal_defaults(),
+        sound_open = "doors_steel_door_open",
+        sound_close = "doors_steel_door_close",
+        gain_open = 0.2,
+        gain_close = 0.2,
+        recipe = {
+			{"default:bronze_ingot", "default:bronze_ingot"},
+			{"default:bronze_ingot", "default:bronze_ingot"},
+			{"default:bronze_ingot", "default:bronze_ingot"},
+		}
+    })
+end
+
 if minetest.get_modpath("stairs") then
     stairs.register_stair_and_slab("basalt", "amethyst_new:basalt",
     {cracky = 2},
