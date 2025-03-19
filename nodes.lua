@@ -157,6 +157,24 @@ if minetest.get_modpath("doors") then
 			{"default:bronze_ingot", "default:bronze_ingot"},
 		}
     })
+    
+    doors.register("door_amethyst_bronze", {
+        tiles = {{name = "amethyst_bronze_amethyst_door.png", backface_culling = true}},
+        description = "Bronze Amethyst Door",
+        inventory_image = "amethyst_item_bronze_amethyst_door.png",
+        protected = true,
+        groups = {node = 1, cracky = 1, level = 2},
+        sounds = default.node_sound_metal_defaults(),
+        sound_open = "doors_steel_door_open",
+        sound_close = "doors_steel_door_close",
+        gain_open = 0.2,
+        gain_close = 0.2,
+        recipe = {
+			{"default:bronze_ingot", "amethyst_new:amethyst"},
+			{"amethyst_new:amethyst", "amethyst_new:amethyst"},
+			{"amethyst_new:amethyst", "default:bronze_ingot"},
+		}
+    })
 end
 
 if minetest.get_modpath("stairs") then
