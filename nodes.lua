@@ -152,10 +152,10 @@ if minetest.get_modpath("doors") then
         gain_open = 0.2,
         gain_close = 0.2,
         recipe = {
-			{"default:bronze_ingot", "default:bronze_ingot"},
-			{"default:bronze_ingot", "default:bronze_ingot"},
-			{"default:bronze_ingot", "default:bronze_ingot"},
-		}
+            {"default:bronze_ingot", "default:bronze_ingot"},
+            {"default:bronze_ingot", "default:bronze_ingot"},
+            {"default:bronze_ingot", "default:bronze_ingot"},
+        }
     })
     
     doors.register("door_amethyst_bronze", {
@@ -170,10 +170,25 @@ if minetest.get_modpath("doors") then
         gain_open = 0.2,
         gain_close = 0.2,
         recipe = {
-			{"default:bronze_ingot", "amethyst_new:amethyst"},
-			{"amethyst_new:amethyst", "amethyst_new:amethyst"},
-			{"amethyst_new:amethyst", "default:bronze_ingot"},
-		}
+            {"default:bronze_ingot", "amethyst_new:amethyst"},
+            {"amethyst_new:amethyst", "amethyst_new:amethyst"},
+            {"amethyst_new:amethyst", "default:bronze_ingot"},
+        }
+    })
+    
+    doors.register_trapdoor("amethyst_new:trapdoor_bronze", {
+        description = "Bronze Trapdoor",
+        inventory_image = "amethyst_bronze_trapdoor.png",
+        wield_image = "amethyst_bronze_trapdoor.png",
+        tile_front = "amethyst_bronze_trapdoor.png",
+        tile_side = "amethyst_bronze_trapdoor_side.png",
+        protected = true,
+        sounds = default.node_sound_metal_defaults(),
+        sound_open = "doors_steel_door_open",
+        sound_close = "doors_steel_door_close",
+        gain_open = 0.2,
+        gain_close = 0.2,
+        groups = {cracky = 1, level = 2, door = 1},
     })
 end
 
