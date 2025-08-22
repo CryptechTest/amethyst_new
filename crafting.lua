@@ -79,3 +79,19 @@ minetest.register_craft({
         {"default:bronze_ingot", "amethyst_new:amethyst", "default:bronze_ingot"},
     },
 })
+
+minetest.register_craft({
+    output = "amethyst_new:trapdoor_bronze",
+    recipe = {
+        {"default:bronze_ingot", "default:bronze_ingot"},
+        {"default:bronze_ingot", "default:bronze_ingot"},
+    }
+})
+
+minetest.register_craft({
+    output = "amethyst_new:trapdoor_amethyst_bronze",
+    recipe = {
+        {"default:bronze_ingot", "default:bronze_ingot"},
+        {"amethyst_new:amethyst", "amethyst_new:amethyst"},
+    }
+})

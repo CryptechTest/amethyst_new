@@ -190,6 +190,21 @@ if minetest.get_modpath("doors") then
         gain_close = 0.2,
         groups = {cracky = 1, level = 2, door = 1},
     })
+    
+    doors.register_trapdoor("amethyst_new:trapdoor_amethyst_bronze", {
+        description = "Bronze Amethyst Trapdoor",
+        inventory_image = "amethyst_bronze_amethyst_trapdoor.png",
+        wield_image = "amethyst_bronze_amethyst_trapdoor.png",
+        tile_front = "amethyst_bronze_amethyst_trapdoor.png",
+        tile_side = "amethyst_bronze_trapdoor_side.png",
+        protected = true,
+        sounds = default.node_sound_metal_defaults(),
+        sound_open = "doors_steel_door_open",
+        sound_close = "doors_steel_door_close",
+        gain_open = 0.2,
+        gain_close = 0.2,
+        groups = {cracky = 1, level = 2, door = 1},
+    })
 end
 
 if minetest.get_modpath("stairs") then
