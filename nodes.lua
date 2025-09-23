@@ -1,46 +1,46 @@
-minetest.register_node("amethyst_new:basalt", {
+core.register_node("amethyst_new:basalt", {
     description = "Basalt",
     tiles = {"amethyst_basalt.png"},
     groups = {cracky = 2},
     sounds = default.node_sound_stone_defaults(),
 })
 
-minetest.register_node("amethyst_new:basalt_block", {
+core.register_node("amethyst_new:basalt_block", {
     description = "Basalt Block",
     tiles = {"amethyst_basalt_block.png"},
     groups = {cracky = 2},
     sounds = default.node_sound_stone_defaults(),
 })
 
-minetest.register_node("amethyst_new:basalt_brick", {
+core.register_node("amethyst_new:basalt_brick", {
     description = "Basalt Brick",
     tiles = {"amethyst_basalt_brick.png"},
     groups = {cracky = 2},
     sounds = default.node_sound_stone_defaults(),
 })
 
-minetest.register_node("amethyst_new:calcite", {
+core.register_node("amethyst_new:calcite", {
     description = "Calcite",
     tiles = {"amethyst_calcite.png"},
     groups = {cracky = 2},
     sounds = default.node_sound_stone_defaults(),
 })
 
-minetest.register_node("amethyst_new:calcite_block", {
+core.register_node("amethyst_new:calcite_block", {
     description = "Calcite Block",
     tiles = {"amethyst_calcite_block.png"},
     groups = {cracky = 2},
     sounds = default.node_sound_stone_defaults(),
 })
 
-minetest.register_node("amethyst_new:calcite_brick", {
+core.register_node("amethyst_new:calcite_brick", {
     description = "Calcite Brick",
     tiles = {"amethyst_calcite_brick.png"},
     groups = {cracky = 2},
     sounds = default.node_sound_stone_defaults(),
 })
 
-minetest.register_node("amethyst_new:checkerboard", {
+core.register_node("amethyst_new:checkerboard", {
     description = "Checkerboard Block",
     tiles = {"amethyst_checkerboard.png"},
     paramtype2 = "facedir",
@@ -48,14 +48,14 @@ minetest.register_node("amethyst_new:checkerboard", {
     sounds = default.node_sound_stone_defaults(),
 })
 
-minetest.register_node("amethyst_new:amethyst", {
+core.register_node("amethyst_new:amethyst", {
     description = "Amethyst Block",
     tiles = {"amethyst_block.png"},
     groups = {cracky = 3},
     sounds = default.node_sound_glass_defaults(),
 })
 
-minetest.register_node("amethyst_new:amethyst_budding", {
+core.register_node("amethyst_new:amethyst_budding", {
     description = "Budding Amethyst Block",
     tiles = {"amethyst_block.png^[combine:16x80:0,-48=crack_anylength.png"},
     groups = {cracky = 3},
@@ -63,7 +63,7 @@ minetest.register_node("amethyst_new:amethyst_budding", {
     sounds = default.node_sound_glass_defaults(),
 })
 
-minetest.register_node("amethyst_new:cluster_small", {
+core.register_node("amethyst_new:cluster_small", {
     description = "Small Amethyst Cluster",
     tiles = {"amethyst_cluster_small.png"},
     drawtype = "plantlike",
@@ -87,7 +87,7 @@ minetest.register_node("amethyst_new:cluster_small", {
     sounds = default.node_sound_glass_defaults(),
 })
 
-minetest.register_node("amethyst_new:cluster_medium", {
+core.register_node("amethyst_new:cluster_medium", {
     description = "Medium Amethyst Cluster",
     tiles = {"amethyst_cluster_medium.png"},
     drawtype = "plantlike",
@@ -111,7 +111,7 @@ minetest.register_node("amethyst_new:cluster_medium", {
     sounds = default.node_sound_glass_defaults(),
 })
 
-minetest.register_node("amethyst_new:cluster_large", {
+core.register_node("amethyst_new:cluster_large", {
     description = "Large Amethyst Cluster",
     tiles = {"amethyst_cluster_large.png"},
     drawtype = "plantlike",
@@ -129,7 +129,7 @@ minetest.register_node("amethyst_new:cluster_large", {
     sounds = default.node_sound_glass_defaults(),
 })
 
-minetest.register_node("amethyst_new:tinted_glass", {
+core.register_node("amethyst_new:tinted_glass", {
     description = "Tinted Glass",
     drawtype = "glasslike_framed_optional",
     tiles = {"amethyst_tinted_glass.png", "amethyst_tinted_glass_detail.png"},
@@ -139,7 +139,7 @@ minetest.register_node("amethyst_new:tinted_glass", {
     sounds = default.node_sound_glass_defaults(),
 })
 
-if minetest.get_modpath("doors") then
+if core.get_modpath("doors") then
     doors.register("door_bronze", {
         tiles = {{name = "amethyst_bronze_door.png", backface_culling = true}},
         description = "Bronze Door",
@@ -207,7 +207,7 @@ if minetest.get_modpath("doors") then
     })
 end
 
-if minetest.get_modpath("stairs") then
+if core.get_modpath("stairs") then
     stairs.register_stair_and_slab("basalt", "amethyst_new:basalt",
     {cracky = 2},
     {"amethyst_basalt.png"},
@@ -258,16 +258,16 @@ if minetest.get_modpath("stairs") then
     default.node_sound_stone_defaults())
 end
 
-if minetest.get_modpath("walls") then
+if core.get_modpath("walls") then
     walls.register("amethyst_new:basalt_brick_wall", "Basalt Brick Wall", "amethyst_basalt_brick.png", "amethyst_new:basalt_brick", default.node_sound_stone_defaults())
     walls.register("amethyst_new:calcite_brick_wall", "Calcite Brick Wall", "amethyst_calcite_brick.png", "amethyst_new:calcite_brick", default.node_sound_stone_defaults())
 end
 
-minetest.register_craftitem("amethyst_new:amethyst_shard", {
+core.register_craftitem("amethyst_new:amethyst_shard", {
     description = "Amethyst Shard",
     inventory_image = "amethyst_shard.png",
 })
 
-if minetest.get_modpath("mesecons_mvps") then
+if core.get_modpath("mesecons_mvps") then
     mesecon.register_mvps_stopper("amethyst_new:amethyst_budding")
 end

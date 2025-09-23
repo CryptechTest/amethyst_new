@@ -1,4 +1,4 @@
-local modpath = minetest.get_modpath("amethyst_new")
+local modpath = core.get_modpath("amethyst_new")
 
 dofile(modpath.."/nodes.lua")
 dofile(modpath.."/crafting.lua")

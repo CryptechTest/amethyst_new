@@ -24,7 +24,7 @@ local off_def = {
     sounds = default.node_sound_metal_defaults(),
 }
 
-if minetest.get_modpath("mesecons") then
+if core.get_modpath("mesecons") then
     on_def.mesecons = {receptor = {
             rules = lantern_rules,
             state = mesecon.state.on,
@@ -33,7 +33,7 @@ if minetest.get_modpath("mesecons") then
             rules = lantern_rules,
             action_on = function (pos, node)
                 node.name = "amethyst_new:lantern_off"
-                minetest.swap_node(pos, node)
+                core.swap_node(pos, node)
                 mesecon.receptor_off(pos, lantern_rules)
             end
     }}
@@ -45,24 +45,24 @@ if minetest.get_modpath("mesecons") then
             rules = lantern_rules,
             action_on = function (pos, node)
                 node.name = "amethyst_new:lantern"
-                minetest.swap_node(pos, node)
+                core.swap_node(pos, node)
                 mesecon.receptor_on(pos, lantern_rules)
             end
     }}
 else
     off_def.on_punch = function(pos, node, puncher)
         local name = puncher:get_player_name() or ""
-        if minetest.is_protected(pos, name) then return end
+        if core.is_protected(pos, name) then return end
         node.name = "amethyst_new:lantern"
-        minetest.swap_node(pos, node)
+        core.swap_node(pos, node)
     end
     on_def.on_punch = function(pos, node, puncher)
         local name = puncher:get_player_name() or ""
-        if minetest.is_protected(pos, name) then return end
+        if core.is_protected(pos, name) then return end
         node.name = "amethyst_new:lantern_off"
-        minetest.swap_node(pos, node)
+        core.swap_node(pos, node)
     end
 end
 
-minetest.register_node("amethyst_new:lantern", on_def)
-minetest.register_node("amethyst_new:lantern_off", off_def)
+core.register_node("amethyst_new:lantern", on_def)
+core.register_node("amethyst_new:lantern_off", off_def)
