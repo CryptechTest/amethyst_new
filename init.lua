@@ -17,3 +17,7 @@ geodes_lib:register_geode({
     radius_min = 2,
     radius_max = 10,
 })
+
+if core.get_modpath("lucky_block") then
+    dofile(modpath.."/lucky_block.lua")
+end
