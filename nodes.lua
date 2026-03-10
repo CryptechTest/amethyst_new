@@ -76,7 +76,7 @@ core.register_node("amethyst_new:cluster_small", {
         type = "fixed",
         fixed = {-4/16, -7/16, -4/16, 4/16, -3/16, 4/16},
     },
-    groups = {cracky = 3},
+    groups = {cracky = 3, not_in_creative_inventory = 1},
     drop = {
         max_items = 1,
         items = {
@@ -100,7 +100,7 @@ core.register_node("amethyst_new:cluster_medium", {
         type = "fixed",
         fixed = {-5/16, -8/16, -5/16, 5/16, -2/16, 5/16},
     },
-    groups = {cracky = 3},
+    groups = {cracky = 3, not_in_creative_inventory = 1},
     drop = {
         max_items = 1,
         items = {
