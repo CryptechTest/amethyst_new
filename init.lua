@@ -10,14 +10,15 @@ geodes_lib:register_geode({
     wherein = "default:stone",
     y_min = -1000,
     y_max = -128,
-    scarcity = 80,
-    generation_chance = 60,
+    scarcity = 90,
+    generation_chance = 50,
     inner = "amethyst_new:amethyst",
+    inners = {{ name = "amethyst_new:amethyst", fill = 80 }, { name = "amethyst_new:calcite", fill = 20 }},
     inner_alt = "amethyst_new:amethyst_budding",
-    inner_alt_chance = 200,
+    inner_alt_chance = 150,
     shell = {"amethyst_new:basalt", "amethyst_new:calcite"},
     radius_min = 2,
-    radius_max = 5,
+    radius_max = 7,
 })
 
 geodes_lib:register_geode({
@@ -26,13 +27,13 @@ geodes_lib:register_geode({
     y_min = -5000,
     y_max = -1000,
     scarcity = 70,
-    generation_chance = 70,
+    generation_chance = 60,
     inner = "amethyst_new:amethyst",
     inner_alt = "amethyst_new:amethyst_budding",
-    inner_alt_chance = 160,
+    inner_alt_chance = 100,
     shell = {"amethyst_new:basalt", "amethyst_new:calcite"},
     radius_min = 2,
-    radius_max = 7,
+    radius_max = 9,
 })
 
 geodes_lib:register_geode({
@@ -40,15 +41,15 @@ geodes_lib:register_geode({
     wherein = "default:stone",
     y_min = -7000,
     y_max = -1000,
-    scarcity = 60,
+    scarcity = 80,
     generation_chance = 50,
     inner = "amethyst_new:amethyst",
     inner_alt = "amethyst_new:amethyst_budding",
-    inner_alt_chance = 200,
-    shell = {"amethyst_new:basalt", "amethyst_new:calcite"},
-    cavity = { lower_fill = "default:river_water_source", upper_fill = "air", threshold = 40, span = 30 },
+    inner_alt_chance = 125,
+    shell = {"amethyst_new:basalt", "amethyst_new:calcite", "amethyst_new:calcite"},
+    cavity = { lower_fill = "default:river_water_source", upper_fill = "air", threshold = 30, span = 25 },
     radius_min = 3,
-    radius_max = 8,
+    radius_max = 10,
 })
 
 geodes_lib:register_geode({
@@ -60,10 +61,10 @@ geodes_lib:register_geode({
     generation_chance = 100,
     inner = "amethyst_new:amethyst",
     inner_alt = "amethyst_new:amethyst_budding",
-    inner_alt_chance = 128,
+    inner_alt_chance = 60,
     shell = {"amethyst_new:basalt", "amethyst_new:calcite"},
     radius_min = 3,
-    radius_max = 10,
+    radius_max = 12,
 })
 
 geodes_lib:register_geode({
@@ -75,11 +76,11 @@ geodes_lib:register_geode({
     generation_chance = 50,
     inner = "amethyst_new:amethyst",
     inner_alt = "amethyst_new:amethyst_budding",
-    inner_alt_chance = 160,
+    inner_alt_chance = 90,
     shell = {"amethyst_new:basalt", "amethyst_new:calcite", "amethyst_new:calcite"},
-    cavity = { lower_fill = "default:river_water_source", upper_fill = "air", threshold = 60, span = 50 },
-    radius_min = 4,
-    radius_max = 11,
+    cavity = { lower_fill = "default:river_water_source", upper_fill = "air", threshold = 40, span = 20 },
+    radius_min = 3,
+    radius_max = 13,
 })
 
 if core.get_modpath("ctg_world") then
@@ -92,10 +93,10 @@ if core.get_modpath("ctg_world") then
         generation_chance = 90,
         inner = "amethyst_new:amethyst",
         inner_alt = "amethyst_new:amethyst_budding",
-        inner_alt_chance = 96,
+        inner_alt_chance = 64,
         shell = {"amethyst_new:basalt", "amethyst_new:calcite"},
         radius_min = 4,
-        radius_max = 12,
+        radius_max = 15,
     })
 
     if core.get_modpath("ctg_airs") then
@@ -109,10 +110,10 @@ if core.get_modpath("ctg_world") then
             inner = "amethyst_new:amethyst",
             inner_alt = "amethyst_new:amethyst_budding",
             inner_alt_chance = 196,
-            shell = {"amethyst_new:basalt", "amethyst_new:basalt", "amethyst_new:calcite"},
-            cavity = { lower_fill = "default:lava_source", upper_fill = "ctg_airs:atmos_hot", threshold = 40, span = 30 },
+            shell = {"amethyst_new:basalt", "amethyst_new:calcite", "amethyst_new:basalt"},
+            cavity = { lower_fill = "default:lava_source", upper_fill = "ctg_airs:atmos_hot", threshold = 30, span = 10 },
             radius_min = 4,
-            radius_max = 11,
+            radius_max = 13,
         })
     else
         geodes_lib:register_geode({
@@ -125,10 +126,10 @@ if core.get_modpath("ctg_world") then
             inner = "amethyst_new:amethyst",
             inner_alt = "amethyst_new:amethyst_budding",
             inner_alt_chance = 196,
-            shell = {"amethyst_new:basalt", "amethyst_new:basalt", "amethyst_new:calcite"},
-            cavity = { lower_fill = "default:lava_source", upper_fill = "air", threshold = 40, span = 30 },
+            shell = {"amethyst_new:basalt", "amethyst_new:calcite", "amethyst_new:basalt"},
+            cavity = { lower_fill = "default:lava_source", upper_fill = "air", threshold = 30, span = 10 },
             radius_min = 4,
-            radius_max = 11,
+            radius_max = 13,
         })
     end
 end
