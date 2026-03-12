@@ -24,7 +24,7 @@ geodes_lib:register_geode({
 geodes_lib:register_geode({
     id = 'deep',
     wherein = "default:stone",
-    y_min = -5000,
+    y_min = -10000,
     y_max = -1000,
     scarcity = 70,
     generation_chance = 60,

@@ -44,22 +44,36 @@ core.register_node("amethyst_new:checkerboard", {
     description = "Checkerboard Block",
     tiles = {"amethyst_checkerboard.png"},
     paramtype2 = "facedir",
-    groups = {cracky = 2},
+    groups = {cracky = 2, level = 1},
     sounds = default.node_sound_stone_defaults(),
 })
 
 core.register_node("amethyst_new:amethyst", {
     description = "Amethyst Block",
     tiles = {"amethyst_block.png"},
-    groups = {cracky = 3},
+    groups = {cracky = 3, level = 1, gemstone = 1},
     sounds = default.node_sound_glass_defaults(),
 })
 
 core.register_node("amethyst_new:amethyst_budding", {
     description = "Budding Amethyst Block",
     tiles = {"amethyst_block.png^[combine:16x80:0,-48=crack_anylength.png"},
-    groups = {cracky = 3},
+    groups = {cracky = 3, level = 1, gemstone = 2},
     drop = "amethyst_new:amethyst",
+    sounds = default.node_sound_glass_defaults(),
+})
+
+core.register_node("amethyst_new:amethyst_block", {
+    description = "Amethyst Crystal Block",
+    tiles = {"amethyst_crystal_block.png"},
+    groups = {cracky = 3, level = 2, crystal_block = 1, gemstone = 3},
+    sounds = default.node_sound_glass_defaults(),
+})
+
+core.register_node("amethyst_new:amethyst_brick", {
+    description = "Amethyst Crystal Brick",
+    tiles = {"amethyst_crystal_brick.png"},
+    groups = {cracky = 3, level = 2, gemstone = 1},
     sounds = default.node_sound_glass_defaults(),
 })
 
@@ -76,7 +90,7 @@ core.register_node("amethyst_new:cluster_small", {
         type = "fixed",
         fixed = {-4/16, -7/16, -4/16, 4/16, -3/16, 4/16},
     },
-    groups = {cracky = 3, not_in_creative_inventory = 1},
+    groups = {cracky = 3, not_in_creative_inventory = 1, gemstone = 1},
     drop = {
         max_items = 1,
         items = {
@@ -100,7 +114,7 @@ core.register_node("amethyst_new:cluster_medium", {
         type = "fixed",
         fixed = {-5/16, -8/16, -5/16, 5/16, -2/16, 5/16},
     },
-    groups = {cracky = 3, not_in_creative_inventory = 1},
+    groups = {cracky = 3, not_in_creative_inventory = 1, gemstone = 1},
     drop = {
         max_items = 1,
         items = {
@@ -124,7 +138,7 @@ core.register_node("amethyst_new:cluster_large", {
         type = "fixed",
         fixed = {-5/16, -8/16, -5/16, 5/16, 4/16, 5/16},
     },
-    groups = {cracky = 3},
+    groups = {cracky = 3, gemstone = 1},
     drop = "amethyst_new:amethyst_shard",
     sounds = default.node_sound_glass_defaults(),
 })
