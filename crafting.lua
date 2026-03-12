@@ -75,15 +75,6 @@ core.register_craft({
 })
 
 core.register_craft({
-    output = "amethyst_new:amethyst_brick",
-    recipe = {
-        {"", "amethyst_new:amethyst_block", "amethyst_new:amethyst_block"},
-        {"", "amethyst_new:amethyst_block", "amethyst_new:amethyst_block"},
-        {"", "", ""},
-    },
-})
-
-core.register_craft({
     output = "amethyst_new:tinted_glass 2",
     recipe = {
         {"", "amethyst_new:amethyst_shard", ""},
