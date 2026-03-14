@@ -60,7 +60,7 @@ geodes_lib:register_geode({
     y_min = -10000,
     y_max = -5000,
     scarcity = 78,
-    generation_chance = 75,
+    generation_chance = 40,
     inner = "amethyst_new:amethyst",
     inner_alt = "amethyst_new:amethyst_budding",
     inner_alt_chance = 60,
@@ -74,11 +74,46 @@ geodes_lib:register_geode({
     wherein = "default:stone",
     y_min = -10000,
     y_max = -7000,
+    scarcity = 64,
+    generation_chance = 20,
+    inner = "amethyst_new:amethyst",
+    inner_alt = "amethyst_new:amethyst_budding",
+    inner_alt_chance = 90,
+    shell = {"amethyst_new:basalt", "amethyst_new:calcite", "amethyst_new:calcite"},
+    cavity = { lower_fill = "default:river_water_source", upper_fill = "air", threshold = 40, span = 20 },
+    radius_min = 3,
+    radius_max = 13,
+})
+
+
+if core.get_modpath("deepslate") then
+    -- slate
+    geodes_lib:register_geode({
+        id = 'deepest',
+        wherein = "deepslate:deepslate",
+        y_min = -10000,
+        y_max = -5000,
+        scarcity = 78,
+        generation_chance = 60,
+        inner = "amethyst_new:amethyst",
+        inner_alt = "amethyst_new:amethyst_budding",
+        inner_alt_chance = 60,
+        shell = {"amethyst_new:basalt", "amethyst_new:basalt", "amethyst_new:calcite"},
+        radius_min = 3,
+        radius_max = 12,
+    })
+end
+
+geodes_lib:register_geode({
+    id = 'deepest_water',
+    wherein = "deepslate:deepslate",
+    y_min = -10000,
+    y_max = -7000,
     scarcity = 60,
     generation_chance = 25,
     inner = "amethyst_new:amethyst",
     inner_alt = "amethyst_new:amethyst_budding",
-    inner_alt_chance = 90,
+    inner_alt_chance = 80,
     shell = {"amethyst_new:basalt", "amethyst_new:calcite", "amethyst_new:calcite"},
     cavity = { lower_fill = "default:river_water_source", upper_fill = "air", threshold = 40, span = 20 },
     radius_min = 3,
